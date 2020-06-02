@@ -1,0 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+  <input type="file" multiple directory mozdirectory webkitdirectory @change="loadTextFromFile"/>
+  <!--  <input type="file" @change="loadTextFromFile"/>-->
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        methods: {
+            loadTextFromFile: function (e) {
+                for (const file of e.target.files) {
+                    let file_name = file.webkitRelativePath;
+                    if ('' == file_name) {
+                        file_name = file.name;
+                    }
+                    console.log(file_name);
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const file_content = e.target.result;
+                        console.log(file_content);
+                    };
+                    reader.readAsText(file);
+                }
+            }
+        },
+    })
+</script>
