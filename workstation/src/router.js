@@ -1,11 +1,17 @@
 const routers = [
-  // service
   {
     path: '/',
     meta: {
+      title: 'Workstation'
+    },
+    component: (resolve) => require(['./service/Workstation.vue'], resolve)
+  },
+  {
+    path: '/designer/bdm',
+    meta: {
       title: 'BDM-Designer'
     },
-    component: (resolve) => require(['./service/BDM-Designer.vue'], resolve)
+    component: (resolve) => require(['./service/designer/bdm/BDM.vue'], resolve)
   },
 ];
 export default routers;
