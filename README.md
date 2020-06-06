@@ -1,3 +1,5 @@
+![laashub-dev-overview](docs/laashub-dev-overview.png)
+
 # 更多文档请前往[docs](docs)目录查看
 
 # laas-web
