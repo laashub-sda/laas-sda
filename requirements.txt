@@ -1,7 +1,0 @@
-flask
-flask-cors
-urllib3
-PyYAML
-PyMySQL
-DBUtils
-github-flask

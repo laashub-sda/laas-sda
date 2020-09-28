@@ -1,4 +1,0 @@
-[mysql]
-[mysqld]
-log-bin=binlog
-server-id=1
